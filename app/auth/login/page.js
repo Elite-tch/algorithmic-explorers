@@ -2,6 +2,7 @@
 
 import LoginForm from "@/app/components/form-elements/LoginForm";
 import Image from "next/image";
+import BackButton from "@/app/components/BackButton";
 
 export default function LoginPage() {
 
@@ -11,7 +12,7 @@ export default function LoginPage() {
       {/*  TOP/Hero section */}
       <div className="relative bg-linear-to-br from-[#322951] via-[#7b2cbf] to-[#5a189a] text-white pb-24 overflow-hidden">
 
-
+        <BackButton />
         {/* The background Wave */}
         <svg
           className="absolute inset-0 w-full h-full object-cover pointer-events-none z-0 opacity-25"
