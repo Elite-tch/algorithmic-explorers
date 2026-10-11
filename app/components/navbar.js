@@ -31,11 +31,10 @@ function NavigationItems({ pathname, mobile = false }) {
 			<Link
 				key={href}
 				href={href}
-				className={`group relative flex min-w-0 flex-col items-center justify-center gap-1 px-2 py-2 text-[10px] font-semibold transition-all duration-200 after:absolute after:inset-x-2 after:bottom-0 after:h-0.5 after:scale-x-0 after:bg-[#30244f] after:transition-transform after:duration-200 sm:text-xs md:flex-row md:gap-2 md:px-3 md:py-2.5 md:text-sm ${
-					isActive
+				className={`group relative flex min-w-0 flex-col items-center justify-center gap-1 px-2 py-2 text-[10px] font-semibold transition-all duration-200 after:absolute after:inset-x-2 after:bottom-0 after:h-0.5 after:scale-x-0 after:bg-[#30244f] after:transition-transform after:duration-200 sm:text-xs md:flex-row md:gap-2 md:px-3 md:py-2.5 md:text-sm ${isActive
 						? "font-bold text-[#30244f] after:scale-x-100"
 						: "text-[#30244f] hover:text-[#2e438e] hover:after:scale-x-100"
-				}`}
+					}`}
 				aria-current={isActive ? "page" : undefined}
 			>
 				<Icon className="h-5 w-5 shrink-0 transition-transform duration-200 group-hover:-translate-y-0.5 md:hidden" aria-hidden="true" />
@@ -69,11 +68,10 @@ export default function Navbar() {
 
 					<div className="flex shrink-0 items-center gap-1.5 sm:gap-2">
 						<Link
-							className={`inline-flex items-center gap-1 rounded-full px-2.5 py-2 text-xs font-semibold transition-colors duration-200 sm:gap-2 sm:px-3 sm:text-sm ${
-								pathname === "/auth/login"
+							className={`inline-flex items-center gap-1 rounded-full px-2.5 py-2 text-xs font-semibold transition-colors duration-200 sm:gap-2 sm:px-3 sm:text-sm ${pathname === "/auth/login"
 									? "bg-[#30244f]/10 text-[#30244f]"
 									: "text-[#30244f] bg-[#f6ab8c] hover:bg-[#f6ab8c]/80 hover:text-[#2e438e] "
-							}`}
+								}`}
 							href="/auth/login"
 							aria-current={pathname === "/auth/login" ? "page" : undefined}
 						>
@@ -81,9 +79,8 @@ export default function Navbar() {
 							<span>Log in</span>
 						</Link>
 						<Link
-							className={`inline-flex items-center gap-1 rounded-full px-3 py-2 text-xs font-semibold text-white shadow-sm  hover:bg-[#2e438e] hover:shadow-md sm:gap-2 sm:px-4 sm:text-sm ${
-								pathname === "/auth/signup" ? "bg-[#2e438e]" : "bg-[#30244f]"
-							}`}
+							className={`inline-flex items-center gap-1 rounded-full px-3 py-2 text-xs font-semibold text-white shadow-sm  hover:bg-[#2e438e] hover:shadow-md sm:gap-2 sm:px-4 sm:text-sm ${pathname === "/auth/signup" ? "bg-[#2e438e]" : "bg-[#30244f]"
+								}`}
 							href="/auth/signup"
 							aria-current={pathname === "/auth/signup" ? "page" : undefined}
 						>
