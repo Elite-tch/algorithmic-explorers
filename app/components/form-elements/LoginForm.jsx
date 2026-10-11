@@ -9,10 +9,15 @@ const LoginForm = () => {
     // Later Submit Logic
   }
   return (
-    <div className="flex-1 flex flex-col justify-between px-7 pt-4 pb-8 max-w-md mx-auto w-full">
+    <div className="flex flex-col flex-1 justify-between px-7 pt-4 pb-8 max-w-md mx-auto lg:mx-20 lg:mt-20 w-full ">
       <form onSubmit={handleSubmit}>
         {/* INPUTS */}
-
+        <h1 className="hidden lg:block text-4xl font-bold tracking-tight text-[#352951]">
+          Welcome
+        </h1>
+        <p className="hidden lg:block text-[#f6ab8c] font-bold text-sm mb-1.5">
+          Sign in to continue
+        </p>
         <div className="space-y-4">
           {/* Email / Phone Input */}
           <FormInput
