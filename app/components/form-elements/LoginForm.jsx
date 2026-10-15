@@ -1,7 +1,8 @@
 "use client";
-import { LogInIcon } from "lucide-react";
+import { UserRound, LockKeyhole, LogInIcon } from "lucide-react";
 import FormInput from "./FormInput";
 import FormButton from "./FormButton";
+import Link from "next/link";
 
 const LoginForm = () => {
   function handleSubmit(e) {
@@ -21,13 +22,22 @@ const LoginForm = () => {
         <div className="space-y-4">
           {/* Email / Phone Input */}
           <FormInput
+            name="email"
             type="text"
-            name="emailOrPhone"
-            placeholder="Email or phone"
+            placeholder="Enter your email or phone"
+            icon={UserRound}
+            autoComplete="email"
           />
 
           {/* Password Input */}
-          <FormInput type="text" name="password" placeholder="Password" />
+          <FormInput
+            name="password"
+            type="text"
+            placeholder="Enter your Password"
+            icon={LockKeyhole}
+            isPassword
+            autoComplete="cureen-password"
+          />
 
           {/* Forgot Password */}
           <div className="flex justify-end pt-1">
@@ -55,6 +65,16 @@ const LoginForm = () => {
           <FormButton buttonType="google">Sign In with Google</FormButton>
         </div>
       </form>
+
+      <p className="mt-6 text-center text-xs text-gray-400">
+        {`Don't have an account?`}
+        <Link
+          href="/auth/signup"
+          className="font-semibold text-[#f6ab8c] hover:underline"
+        >
+          Sign up
+        </Link>
+      </p>
     </div>
   );
 };
