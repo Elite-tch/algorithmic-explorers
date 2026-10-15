@@ -3,10 +3,12 @@ import { Eye, EyeOff } from "lucide-react";
 
 const FormInput = ({
   type = "text",
+  value,
   name,
   placeholder,
   icon: Icon,
   isPassword = false,
+  onChange,
   ...props
 }) => {
   const [showPassword, setShowPassword] = useState(false);
@@ -31,11 +33,13 @@ const FormInput = ({
         {...props}
         name={name}
         type={inputType}
+        value={value}
         placeholder={placeholder}
         className={`w-full 
         ${Icon ? "pl-12" : "pr-4"} 
         ${isPassword ? "pl-12" : "pr-4"} 
         py-3.5 text-sm border border-gray-200 rounded-xl focus:outline-none focus:border-[#352951] focus:ring-1 focus:ring-[#7b2cbf] text-gray-700 placeholder-gray-400 transition-colors`}
+        onChange={onChange}
       />
 
       {isPassword && (

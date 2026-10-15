@@ -1,5 +1,4 @@
-import { LogIn, Mail, Lock, User } from "lucide-react";
-import BackButton from "./BackButton";
+import { User } from "lucide-react";
 
 function MobileLoginHero() {
   return (
@@ -15,7 +14,7 @@ function MobileLoginHero() {
             WELCOME BACK
           </span>
 
-          <h1 className="mt-6 text-4xl font-extrabold leading-tight tracking-tight text-white sm:text-5xl">
+          <h1 className="mt-6 font-extrabold leading-tight tracking-tight text-white text-5xl">
             Continue your
             <br />
             <span className="text-[#f6ab8c]">journey.</span>
