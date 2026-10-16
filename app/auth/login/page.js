@@ -13,16 +13,16 @@ export default function LoginPage() {
       <LoginForm />
 
       <section className="hidden lg:flex relative w-full h-full min-h-150 items-center justify-center overflow-hidden">
-        {/* Outer Circle (Largest) */}
+        {/* Largest circle */}
         <div className="absolute right-[-45%] top-1/2 -translate-y-1/2 w-[135%] aspect-square rounded-full bg-[#352951]/35" />
 
         {/* middle Circle */}
         <div className="absolute right-[-35%] top-1/2 -translate-y-1/2 w-[115%] aspect-square rounded-full bg-[#352951]/65" />
 
-        {/*  Inner Circle (solid and smallest) */}
+        {/*  smallest circle */}
         <div className="absolute right-[-25%] top-1/2 -translate-y-1/2 w-[95%] aspect-square rounded-full bg-[#352951]" />
 
-        {/* Laptop Image Placeholder */}
+        {/* Laptop Image */}
         <div className="relative z-10 drop-shadow-[0_20px_35px_rgba(53,41,81,0.5)]">
           <Image
             src="/login-image-PC.png"
