@@ -13,18 +13,30 @@ function MobileLoginHero() {
         <BackButton />
 
         <div>
-          <span className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-2 text-xs font-semibold mt-6 text-[#f6ab8c] sm:text-sm">
+          <span
+            data-aos="fade-down"
+            suppressHydrationWarning={true}
+            className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-2 text-xs font-semibold mt-6 text-[#f6ab8c] sm:text-sm"
+          >
             <User size={16} />
             WELCOME BACK
           </span>
 
-          <h1 className="mt-6 font-extrabold leading-tight tracking-tight text-white text-5xl">
+          <h1
+            data-aos="fade-left"
+            suppressHydrationWarning={true}
+            className="mt-6 font-extrabold leading-tight tracking-tight text-white text-5xl"
+          >
             Continue your
             <br />
             <span className="text-[#f6ab8c]">journey.</span>
           </h1>
 
-          <p className="mt-4 text-sm leading-6 text-white/75 sm:text-base">
+          <p
+            data-aos="fade-left"
+            suppressHydrationWarning={true}
+            className="mt-4 text-sm leading-6 text-white/75 sm:text-base"
+          >
             Sign in to Algorithmic Explorers to access your courses, pick up
             where you left off, and keep building your skills.
           </p>
