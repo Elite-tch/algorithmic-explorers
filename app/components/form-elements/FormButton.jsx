@@ -2,11 +2,11 @@ const FormButton = ({ children, buttonType = "normal" }) => {
   return (
     <>
       {buttonType === "normal" ? (
-        <button className="flex cursor-pointer justify-center gap-2 w-full py-3.5 bg-[#352951] hover:bg-[#423464] text-white font-semibold rounded-xl shadow-md shadow-purple-500/20 transition duration-200">
+        <button className="flex cursor-pointer justify-center gap-2 w-full py-3.5 bg-[#f6ab8c] hover:opacity-90 text-white font-semibold rounded-xl shadow-md shadow-purple-500/20 transition duration-200">
           {children}
         </button>
       ) : (
-        <button className="flex cursor-pointer justify-center items-center gap-2 w-full py-3.5 bg-[#f6ab8c] hover:opacity-90 text-white font-semibold rounded-xl shadow-md shadow-amber-200-500/20 transition duration-200">
+        <button className="flex cursor-pointer justify-center items-center gap-2 w-full py-3.5 bg-[#352951] hover:bg-[#423464]  text-white font-semibold rounded-xl shadow-md shadow-amber-200-500/20 transition duration-200">
           {children}
           {/* Google Icon */}
           <svg

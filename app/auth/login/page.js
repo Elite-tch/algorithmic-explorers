@@ -13,16 +13,32 @@ export default function LoginPage() {
       <LoginForm />
 
       <section className="hidden lg:flex relative w-full h-full min-h-150 items-center justify-center overflow-hidden">
-        {/* Outer Circle (Largest) */}
-        <div className="absolute right-[-45%] top-1/2 -translate-y-1/2 w-[135%] aspect-square rounded-full bg-[#352951]/35" />
+        {/* Largest circle */}
+        <div data-aos="fade-left"
+          data-aos-anchor="#anchor"
+          data-aos-offset="500"
+          data-aos-duration="400"
+          suppressHydrationWarning={true} //  Fix hydration warning issue
+          className="absolute right-[-45%] top-1/2 -translate-y-1/2 w-[135%] aspect-square rounded-full bg-[#352951]/35" />
 
         {/* middle Circle */}
-        <div className="absolute right-[-35%] top-1/2 -translate-y-1/2 w-[115%] aspect-square rounded-full bg-[#352951]/65" />
+        <div data-aos="fade-left"
+          data-aos-anchor="#anchor"
+          data-aos-offset="500"
+          data-aos-duration="800"
+          suppressHydrationWarning={true} //  Fix hydration warning issue
 
-        {/*  Inner Circle (solid and smallest) */}
-        <div className="absolute right-[-25%] top-1/2 -translate-y-1/2 w-[95%] aspect-square rounded-full bg-[#352951]" />
+          className="absolute right-[-35%] top-1/2 -translate-y-1/2 w-[115%] aspect-square rounded-full bg-[#352951]/65" />
 
-        {/* Laptop Image Placeholder */}
+        {/*  smallest circle */}
+        <div data-aos="fade-left"
+          data-aos-anchor="#anchor"
+          data-aos-offset="500"
+          data-aos-duration="1000"
+          suppressHydrationWarning={true} //  Fix hydration warning issue
+          className="absolute right-[-25%] top-1/2 -translate-y-1/2 w-[95%] aspect-square rounded-full bg-[#352951]" />
+
+        {/* Laptop Image */}
         <div className="relative z-10 drop-shadow-[0_20px_35px_rgba(53,41,81,0.5)]">
           <Image
             src="/login-image-PC.png"
