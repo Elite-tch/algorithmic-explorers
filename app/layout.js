@@ -1,5 +1,5 @@
 import { Geist, Geist_Mono } from "next/font/google";
-import Navbar from "./components/navbar";
+import Navbar from "./components/layout/navbar";
 import AosInit from "./components/providers/AosInit";
 import "./globals.css";
 

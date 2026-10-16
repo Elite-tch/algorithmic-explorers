@@ -1,4 +1,4 @@
-import BackButton from "@/app/components/BackButton";
+import BackButton from "@/app/components/layout/BackButton";
 import { User } from "lucide-react";
 
 function MobileLoginHero() {
@@ -11,12 +11,11 @@ function MobileLoginHero() {
       {/* Button and Texts*/}
       <div className="relative mx-auto flex max-w-lg flex-col gap-10 px-5 py-15 sm:px-8 sm:py-16">
         <BackButton />
-
         <div>
           <span
             data-aos="fade-down"
             suppressHydrationWarning={true}
-            className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-2 text-xs font-semibold mt-6 text-[#f6ab8c] sm:text-sm"
+            className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 pt-2 pb-1 text-xs font-semibold mt-6 text-[#f6ab8c] sm:text-sm"
           >
             <User size={16} />
             WELCOME BACK
@@ -44,7 +43,7 @@ function MobileLoginHero() {
       </div>
 
       {/* Wave */}
-      <div className="absolute bottom-[-20] w-full leading-0 z-20">
+      <div className="absolute bottom-[-20] md:bottom-[-35]  w-full leading-0 z-20">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 1440 320"
