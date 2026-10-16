@@ -8,9 +8,9 @@ export default function AosInit() {
   useEffect(() => {
     AOS.init({
       duration: 800, // Global animation duration in ms
-      once: false, // Whether animations should happen only once while scrolling down
+      once: false, // animations happen only once while scrolling down
     });
   }, []);
 
-  return null; // This component doesn't render any visible UI
+  return null; // renders no visible UI
 }
