@@ -1,5 +1,5 @@
 const MobileSignUpHero = () => {
-  return <div>MobileSignUpHero</div>;
+  return <div className="lg:hidden">MobileSignUpHero</div>;
 };
 
 export default MobileSignUpHero;
