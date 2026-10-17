@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import { UserPlus, Mail, Lock, User } from "lucide-react";
-import Link from "next/link";
+import BackButton from "@/app/components/layout/BackButton";
 
 export default function MobileSignupHero() {
   return (
@@ -11,14 +11,15 @@ export default function MobileSignupHero() {
       <div className="pointer-events-none absolute -bottom-20 left-1/4 h-56 w-56 rounded-full bg-[#f6ab8c] opacity-20 blur-3xl" />
 
       <div className="relative mx-auto flex max-w-lg flex-col gap-10 px-5 py-12 sm:px-8 sm:py-16">
-        {/* Header Text Section */}
+        {/* Button and Texts*/}
+        <BackButton />
         <div>
-          <span className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-2 text-xs font-semibold text-[#f6ab8c] sm:text-sm">
+          <span className="mt-6 inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-2 text-xs font-semibold text-[#f6ab8c] sm:text-sm">
             <UserPlus size={16} />
             JOIN THE COMMUNITY
           </span>
 
-          <h1 className="mt-6 text-4xl font-extrabold leading-tight tracking-tight text-white sm:text-5xl">
+          <h1 className="mt-6 text-5xl font-extrabold leading-tight tracking-tight text-white">
             Start your
             <br />
             <span className="text-[#f6ab8c]">exploration.</span>
