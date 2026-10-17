@@ -1,5 +1,12 @@
 "use client";
-import { UserRound, Mail, Phone, LockKeyhole, ShieldCheck } from "lucide-react";
+import {
+  UserRound,
+  Mail,
+  Phone,
+  LockKeyhole,
+  ShieldCheck,
+  UserPlus,
+} from "lucide-react";
 import FormInput from "../../../components/forms/FormInput";
 import FormButton from "../../../components/forms/FormButton";
 import Link from "next/link";
@@ -62,7 +69,7 @@ const SignupForm = () => {
 
   return (
     <div className="flex flex-col flex-1 px-1 pt-4 pb-8 max-w-md mx-auto lg:mx lg:mt w-full ">
-      <form onSubmit={handleSubmit}>
+      <form className="space-y-4" onSubmit={handleSubmit}>
         {inputs.map((input) => {
           return (
             <FormInput
@@ -88,9 +95,12 @@ const SignupForm = () => {
             />
           );
         })}
+        <button className="flex cursor-pointer justify-center gap-2 w-full py-3.5 bg-[#352951] hover:opacity-90 text-white font-semibold rounded-xl shadow-md shadow-purple-500/20 transition duration-200">
+          Create Account <UserPlus size={21} />
+        </button>
       </form>
 
-      <p className="mt-6 text-center text-xs text-gray-400">
+      <p className=" text-center mt-2 text-[13px] text-gray-400">
         {`Already have an account? `}
         <Link
           href="/auth/login"
