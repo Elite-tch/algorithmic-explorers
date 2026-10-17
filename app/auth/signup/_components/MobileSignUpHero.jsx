@@ -31,6 +31,20 @@ export default function MobileSignupHero() {
           </p>
         </div>
       </div>
+      {/* Wave */}
+      <div className="absolute bottom-[-20] md:bottom-[-35]  w-full leading-0 z-20">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 1440 320"
+          className="block w-full h-20 sm:h-30"
+          preserveAspectRatio="none"
+        >
+          <path
+            fill="#ffffff"
+            d="M0,160 C240,240 480,240 720,160 C960,80 1200,80 1440,160 L1440,320 L0,320 Z"
+          />
+        </svg>
+      </div>
     </section>
   );
 }
