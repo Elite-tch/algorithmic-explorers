@@ -53,6 +53,13 @@ const SignupForm = () => {
     // Later Submit Logic
   }
 
+  function updateFields({ target: { name, value } }) {
+    setFormFields({
+      ...formFields,
+      [name]: value,
+    });
+  }
+
   return (
     <div className="flex flex-col flex-1 px-1 pt-4 pb-8 max-w-md mx-auto lg:mx lg:mt w-full ">
       <form onSubmit={handleSubmit}>
@@ -62,7 +69,7 @@ const SignupForm = () => {
               key={input.id}
               name={input.name}
               type={input.type}
-              placeholder={label}
+              placeholder={input.label}
               icon={
                 input.name === "name"
                   ? UserRound
