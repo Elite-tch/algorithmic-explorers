@@ -45,9 +45,54 @@ const defaultFormFields = {
   password: "",
   confirmPassword: "",
 };
-
 const SignupForm = () => {
-  return <div>SignupForm</div>;
-};
+  const [formFields, setFormFields] = useState(defaultFormFields);
 
+  function handleSubmit(e) {
+    e.preventDefault();
+    // Later Submit Logic
+  }
+
+  return (
+    <div className="flex flex-col flex-1 px-1 pt-4 pb-8 max-w-md mx-auto lg:mx lg:mt w-full ">
+      <form onSubmit={handleSubmit}>
+        {inputs.map((input) => {
+          return (
+            <FormInput
+              key={input.id}
+              name={input.name}
+              type={input.type}
+              placeholder={label}
+              icon={
+                input.name === "name"
+                  ? UserRound
+                  : input.name === "email"
+                  ? Mail
+                  : input.name === "phone"
+                  ? Phone
+                  : input.name === "password"
+                  ? LockKeyhole
+                  : input.name === "confirmPassword"
+                  ? ShieldCheck
+                  : null
+              }
+              value={formFields[input.name]}
+              onChange={updateFields}
+            />
+          );
+        })}
+      </form>
+
+      <p className="mt-6 text-center text-xs text-gray-400">
+        {`Already have an account? `}
+        <Link
+          href="/auth/login"
+          className="font-semibold text-[#f6ab8c] hover:underline"
+        >
+          Sign in
+        </Link>
+      </p>
+    </div>
+  );
+};
 export default SignupForm;
