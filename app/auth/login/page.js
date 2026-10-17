@@ -1,17 +1,46 @@
-import LoginForm from "@/app/components/form-elements/LoginForm";
+import LoginForm from "./_components/LoginForm";
 import Image from "next/image";
-import BackButton from "@/app/components/BackButton";
-import MobileLoginHero from "./MobileLoginHero"
+import MobileLoginHero from "./_components/MobileLoginHero"
 
 export default function LoginPage() {
 
   return (
     <div className="m-0 min-h-screen flex flex-col lg:grid lg:grid-cols-2">
 
-      <MobileLoginHero />
+      {/* Left Column: Form & Mobile Headers */}
+      <div className=" flex flex-col w-full h-full">
 
-      <LoginForm />
+        {/* Mobile Header (Hidden on PC) */}
+        <MobileLoginHero />
 
+        {/* Content Container (Centers form on mobile, aligns top-left on PC) */}
+        <div className="flex flex-col flex-1 px-7 pt-2 pb-8 max-w-md mx-auto lg:mx-20 lg:mt-12 w-full">
+
+          {/* PC Header (Hidden on Mobile) */}
+          <div className="hidden lg:block">
+            <h1
+              data-aos="fade-right"
+              suppressHydrationWarning={true} //  Fix hydration warning issue
+              className="hidden lg:flex justify-center items-center gap-3 text-4xl font-extrabold tracking-tight text-[#352951]"
+            >
+              <span>WELCOME BACK</span>
+            </h1>
+            <p
+              data-aos="fade-left"
+              suppressHydrationWarning={true} //  Fix hydration warning issue
+              className="hidden lg:flex justify-center text-[#f6ab8c] font-bold text=xl my-2.5"
+            >
+              Sign in to Continue your journey
+            </p>
+          </div>
+
+          {/* Form Component*/}
+          <LoginForm />
+
+        </div>
+      </div>
+
+      {/* Right Column -  Hidden on Mobile */}
       <section className="hidden lg:flex relative w-full h-full min-h-150 items-center justify-center overflow-hidden">
         {/* Largest circle */}
         <div data-aos="fade-left"
@@ -49,6 +78,5 @@ export default function LoginPage() {
         </div>
       </section>
     </div>
-
   );
 }

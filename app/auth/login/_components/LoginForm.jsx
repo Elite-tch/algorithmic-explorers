@@ -1,7 +1,7 @@
 "use client";
 import { UserRound, LockKeyhole, LogInIcon, User } from "lucide-react";
-import FormInput from "./FormInput";
-import FormButton from "./FormButton";
+import FormInput from "../../../components/forms/FormInput";
+import FormButton from "../../../components/forms/FormButton";
 import Link from "next/link";
 import { useState } from "react";
 
@@ -24,22 +24,7 @@ const LoginForm = () => {
   }
 
   return (
-    <div className="flex flex-col flex-1 px-7 pt-4 pb-8 max-w-md mx-auto lg:mx-20 lg:mt-20 w-full ">
-      <h1
-        data-aos="fade-right"
-        suppressHydrationWarning={true} //  Fix hydration warning issue
-        className="hidden lg:flex justify-center items-center gap-3 text-4xl font-extrabold tracking-tight text-[#352951]"
-      >
-        <span>WELCOME BACK</span>
-      </h1>
-      <p
-        data-aos="fade-left"
-        suppressHydrationWarning={true} //  Fix hydration warning issue
-        className="hidden lg:flex justify-center text-[#f6ab8c] font-bold text=xl my-2.5"
-      >
-        Sign in to Continue your journey
-      </p>
-
+    <div className="flex flex-col flex-1 px-1 pt-4 pb-8 max-w-md mx-auto lg:mx lg:mt w-full ">
       <form onSubmit={handleSubmit}>
         {/* INPUTS */}
         <div className="space-y-4">
