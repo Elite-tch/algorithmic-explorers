@@ -1,7 +1,7 @@
 "use client";
 import { UserRound, LockKeyhole, LogInIcon, User } from "lucide-react";
-import FormInput from "./FormInput";
-import FormButton from "./FormButton";
+import FormInput from "../../../components/forms/FormInput";
+import FormButton from "../../../components/forms/FormButton";
 import Link from "next/link";
 import { useState } from "react";
 
@@ -12,7 +12,6 @@ const defaultFormFields = {
 
 const LoginForm = () => {
   const [formFields, setFormFields] = useState(defaultFormFields);
-
   function handleSubmit(e) {
     e.preventDefault();
     // Later Submit Logic
@@ -23,18 +22,9 @@ const LoginForm = () => {
       [name]: value,
     });
   }
-  return (
-    <div className="flex flex-col flex-1 px-7 pt-4 pb-8 max-w-md mx-auto lg:mx-20 lg:mt-20 w-full ">
-      <h1 className="hidden lg:flex items-center gap-3 text-4xl font-extrabold tracking-tight text-[#352951]">
-        <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border-[3px] border-[#352951]">
-          <User size={24} strokeWidth={2} />
-        </div>
-        <span>WELCOME BACK</span>
-      </h1>
-      <p className="hidden lg:block text-[#f6ab8c] font-bold text=xl my-2.5">
-        Continue your journey
-      </p>
 
+  return (
+    <div className="flex flex-col flex-1 px-1 pt-4 pb-8 max-w-md mx-auto lg:mx lg:mt w-full ">
       <form onSubmit={handleSubmit}>
         {/* INPUTS */}
         <div className="space-y-4">
