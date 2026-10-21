@@ -1,5 +1,6 @@
+import { Suspense } from "react";
 import { Geist, Geist_Mono } from "next/font/google";
-import Navbar from "./components/navbar";
+import AppChrome from "./components/AppChrome";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -23,9 +24,10 @@ export default function RootLayout({ children }) {
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col pb-24 md:pb-0">
-        <Navbar />
-        {children}
+      <body className="min-h-screen flex flex-col">
+    <Suspense fallback={<div className="min-h-screen" />}>
+      <AppChrome>{children}</AppChrome>
+    </Suspense>
       </body>
     </html>
   );
