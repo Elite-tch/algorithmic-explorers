@@ -671,13 +671,7 @@ export default function AboutPage() {
         </div>
       </main>
 
-      {/* Footer */}
-      <footer className="ae-footer">
-        <p>
-          &copy; <span>{currentYear}</span> <span>Algorithmic Explorers</span>.
-          All rights reserved.
-        </p>
-      </footer>
+      
     </div>
   );
 }

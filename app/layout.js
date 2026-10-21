@@ -1,6 +1,7 @@
 import { Suspense } from "react";
 import { Geist, Geist_Mono } from "next/font/google";
 import AppChrome from "./components/AppChrome";
+import AosInit from "./components/providers/AosInit";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -25,6 +26,9 @@ export default function RootLayout({ children }) {
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-screen flex flex-col">
+        {/* Initialize AOS on the client side */}
+        <AosInit />
+
     <Suspense fallback={<div className="min-h-screen" />}>
       <AppChrome>{children}</AppChrome>
     </Suspense>
@@ -32,3 +36,5 @@ export default function RootLayout({ children }) {
     </html>
   );
 }
+
+
