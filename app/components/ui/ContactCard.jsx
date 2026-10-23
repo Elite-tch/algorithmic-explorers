@@ -30,9 +30,16 @@ const iconLookUp = {
   ],
 };
 
-const ContactCard = ({ cardType, heading, topText, bottomText = "" }) => {
+const ContactCard = ({
+  cardType,
+  heading,
+  topText,
+  bottomText = "",
+  aos = "fade up",
+}) => {
   return (
     <div
+      data-aos={aos}
       className={`group rounded-2xl border border-gray-100 ${
         cardType === "inverted" ? `bg-[#322951]` : `bg-white`
       } p-5 shadow-sm transition hover:shadow-md`}
