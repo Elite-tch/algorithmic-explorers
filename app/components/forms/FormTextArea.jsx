@@ -12,8 +12,8 @@ const FormTextArea = ({ id, label, placeholder }) => {
         </div>
         <textarea
           id={id}
-          rows={4}
-          className="w-full pl-12 pr-4 py-3.5 text-sm border border-gray-200 rounded-xl focus:outline-none focus:border-[#352951] focus:ring-1 focus:ring-[#352951] text-gray-700 placeholder-gray-400 transition-colors resize-none"
+          rows={6}
+          className="w-full pl-12 pr-4 py-[13.5px] text-sm border border-gray-200 rounded-xl focus:outline-none focus:border-[#352951] focus:ring-1 focus:ring-[#352951] text-gray-700 placeholder-gray-400 transition-colors resize-none"
           placeholder={placeholder}
         ></textarea>
       </div>
