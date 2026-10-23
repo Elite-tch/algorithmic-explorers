@@ -16,8 +16,7 @@ const dropDownOptions = [
 
 export default function ContactPage() {
   return (
-    <div className="min-h-screen bg-gray-50 font-sans selection:bg-[#f6ab8c] selection:text-[#30244f] py-16 sm:py-24">
-
+    <div className="min-h-screen bg-gray-50 font-sans selection:bg-[#f6ab8c] selection:text-[#30244f] py-16 lg:py-16 sm:py-24">
 
       <section className="relative mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
 
@@ -44,13 +43,13 @@ export default function ContactPage() {
 
               <ContactCard cardType="normal" heading="Address" topText="UNN, Nsukka" bottomText="Enugu, Nigeria." aos="fade-down" />
               <ContactCard cardType="inverted" heading="Phone" topText="+234 900 000 0000" bottomText="+234 800 000 0000" aos="fade-left" />
-              <ContactCard cardType="normal" heading="Email" topText="hello@algorithmicexplorers.com" aos="fade-up" />
-              <ContactCard cardType="normal" heading="Working Hours" topText="Tuesday-Thursday" bottomText='9am-1pm' aos="fade-right" />
+              <ContactCard cardType="normal" heading="Email" topText="hello@algorithmicexplorers.com" aos="fade-up" offset="0" />
+              <ContactCard cardType="normal" heading="Working Hours" topText="Tuesday-Thursday" bottomText='9am-1pm' aos="fade-right" offset="0" />
             </div>
           </div>
 
           {/* right column - the form*/}
-          <div className="rounded-3xl border border-[#322951] border-t-8 bg-white p-8 shadow-xl shadow-gray-200/50 sm:p-10 lg:col-span-7">
+          <div data-aos="zoom-out-up" className="rounded-3xl border border-[#322951] border-t-8 bg-white p-8 shadow-xl shadow-gray-200/50 sm:p-10 lg:col-span-7">
             <h2 className="mb-8 text-2xl font-bold text-[#352951]">Send us a message</h2>
             <form className="flex flex-col gap-6" onSubmit={(e) => e.preventDefault()}>
 

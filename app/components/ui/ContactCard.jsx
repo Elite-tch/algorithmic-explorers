@@ -36,10 +36,12 @@ const ContactCard = ({
   topText,
   bottomText = "",
   aos = "fade up",
+  offset,
 }) => {
   return (
     <div
       data-aos={aos}
+      data-aos-offset={offset || ""}
       className={`group rounded-2xl border border-gray-100 ${
         cardType === "inverted" ? `bg-[#322951]` : `bg-white`
       } p-5 shadow-sm transition hover:shadow-md`}
