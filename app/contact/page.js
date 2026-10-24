@@ -14,9 +14,12 @@ const dropDownOptions = [
   { value: "data", label: "Data Science" },
 ];
 
-export default function ContactPage() {
+const ContactPage = () => {
+  function handleSubmit(e) {
+    e.preventDefault()
+  }
   return (
-    <div className="min-h-screen bg-gray-50 font-sans selection:bg-[#f6ab8c] selection:text-[#30244f] py-16 lg:py-16 sm:py-24">
+    <div className="min-h-screen bg-gray-50 font-sans selection:bg-[#f6ab8c] selection:text-[#30244f] py-12 lg:py-16 sm:py-24">
 
       <section className="relative mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
 
@@ -30,7 +33,7 @@ export default function ContactPage() {
               <span className="mb-4 inline-flex items-center gap-2 rounded-full bg-[#ece7ff] px-4 py-1.5 text-xs font-bold tracking-wide border border-[#322951] text-[#322951]">
                 <Phone size={15} />CONTACT US
               </span>
-              <h1 className="text-4xl font-extrabold tracking-tight text-[#352951] sm:text-5xl">
+              <h1 className="text-5xl lg:text-4xl font-extrabold tracking-tight text-[#352951] sm:text-5xl">
                 Get In Touch With <span className=" text-[#f6ab8c] "> {/*text-transparent bg-clip-text bg-gradient-to-r from-[#f6ab8c] to-[#E9c3f2] */}Our team</span>
               </h1>
               <p className="mt-4 text-base leading-relaxed text-gray-600">
@@ -38,11 +41,11 @@ export default function ContactPage() {
                 Questions about our programs or need guidance? Contact us to take the next step in your tech career.
               </p>
             </div>
-            {/* Info ards */}
+            {/* Info cards */}
             <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 mt-2">
 
-              <ContactCard cardType="normal" heading="Address" topText="UNN, Nsukka" bottomText="Enugu, Nigeria." aos="fade-down" />
-              <ContactCard cardType="inverted" heading="Phone" topText="+234 900 000 0000" bottomText="+234 800 000 0000" aos="fade-left" />
+              <ContactCard cardType="normal" heading="Address" topText="UNN" bottomText="Enugu State, Nigeria." aos="fade-down" />
+              <ContactCard cardType="inverted" heading="Phone" topText="+234 801 234 5678" bottomText="+234 901 215 1987" aos="fade-left" />
               <ContactCard cardType="normal" heading="Email" topText="hello@algorithmicexplorers.com" aos="fade-up" offset="0" />
               <ContactCard cardType="normal" heading="Working Hours" topText="Tuesday-Thursday" bottomText='9am-1pm' aos="fade-right" offset="0" />
             </div>
@@ -51,7 +54,7 @@ export default function ContactPage() {
           {/* right column - the form*/}
           <div data-aos="zoom-out-up" className="rounded-3xl border border-[#322951] border-t-8 bg-white p-8 shadow-xl shadow-gray-200/50 sm:p-10 lg:col-span-7">
             <h2 className="mb-8 text-2xl font-bold text-[#352951]">Send us a message</h2>
-            <form className="flex flex-col gap-6" onSubmit={(e) => e.preventDefault()}>
+            <form className="flex flex-col gap-6" onSubmit={handleSubmit}>
 
               <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
                 <FormInput name="firstName" placeholder="First name" icon={User} />
@@ -61,7 +64,7 @@ export default function ContactPage() {
               <FormDropdown
                 id="course"
                 label="Courses Selection"
-                name="course" git
+                name="course"
                 options={dropDownOptions}
                 placeholder="Select a course of interest..."
               />
@@ -83,3 +86,5 @@ export default function ContactPage() {
     </div>
   );
 }
+
+export default ContactPage;
