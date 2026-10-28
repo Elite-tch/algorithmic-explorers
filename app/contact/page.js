@@ -9,7 +9,7 @@ import { Send, User, Phone } from 'lucide-react';
 
 const dropDownOptions = [
   { value: "frontend", label: "Frontend Development" },
-  { value: "backend", label: "Backend Architecture" },
+  { value: "backend", label: "Backend Development" },
   { value: "design", label: "UI/UX Design" },
   { value: "data", label: "Data Science" },
 ];
