@@ -42,6 +42,7 @@ const ContactCard = ({
     <div
       data-aos={aos}
       data-aos-offset={offset || ""}
+      suppressHydrationWarning={true}
       className={`group rounded-2xl border border-gray-100 ${
         cardType === "inverted" ? `bg-[#322951]` : `bg-white`
       } p-5 shadow-sm transition hover:shadow-md`}
